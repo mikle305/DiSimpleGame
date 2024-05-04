@@ -40,7 +40,6 @@ namespace SimpleGame.UI
 
         private void OnGameStarted(float countdown)
         {
-            SetMainGroupVisibility(false);
             DOTween
                 .To(() => countdown, (v) => countdown = v, 0, countdown)
                 .SetEase(Ease.Linear)
@@ -69,9 +68,9 @@ namespace SimpleGame.UI
             async UniTask CleanUpView()
             {
                 await UniTask.WaitForSeconds(Constants.MenuFadeDuration);
-                _firstNumberText.text = string.Empty;
-                _secondNumberText.text = string.Empty;
+                SetMainGroupVisibility(false);
                 _answerInputField.text = string.Empty;
+                _descriptionText.text = Constants.GameCountdown.ToString();
             }
         }
 
