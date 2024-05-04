@@ -74,13 +74,13 @@ namespace SimpleGame.UI
         {
             if (isAnswerCorrect)
             {
-                _matchResultText.text = "Вы ответили\nПравильно!";
+                _matchResultText.text = "Правильно!\nПродолжить дальше";
                 
                 _matchResultText.color = Color.green;
             }
             else
             {
-                _matchResultText.text = "Неверно,\nПопробуйте снова";
+                _matchResultText.text = "Неверно.\nПопробовать снова";
                 
                 _matchResultText.color = Color.red;
             }

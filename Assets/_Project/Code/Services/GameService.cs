@@ -37,10 +37,10 @@ namespace SimpleGame.Services
             var currentLevel = _progressService.Progress.CurrentLevel;
             
             var minNumber = Mathf.RoundToInt(gameConfig.MinNumberByLevelCurve.Evaluate(currentLevel));
-            var maxNumber = Mathf.RoundToInt(gameConfig.MaxNumberByLevelCurve.Evaluate(currentLevel));
+            var maxNumber = Mathf.RoundToInt(gameConfig.MaxNumberByLevelCurve.Evaluate(currentLevel)) + 1;
 
-            var firstNumber = Random.Range(minNumber, maxNumber + 1);
-            var secondNumber = Random.Range(minNumber, maxNumber + 1);
+            var firstNumber = Random.Range(minNumber, maxNumber);
+            var secondNumber = Random.Range(minNumber, maxNumber);
             
             _expectedAnswer = firstNumber * secondNumber;
             NumbersGenerated?.Invoke(firstNumber, secondNumber);

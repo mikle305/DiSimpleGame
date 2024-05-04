@@ -14,9 +14,10 @@ namespace SimpleGame.UI
         [SerializeField] private TextMeshProUGUI _firstNumberText;
         [SerializeField] private TextMeshProUGUI _secondNumberText;
         [SerializeField] private TextMeshProUGUI _descriptionText;
-        [SerializeField] private Button _submitButton;
         [SerializeField] private TMP_InputField _answerInputField;
-        
+        [SerializeField] private Button _submitButton;
+        [SerializeField] private CanvasGroup _mainGroup;
+
         private GameService _gameService;
         private bool _canSubmit = true;
 
@@ -39,6 +40,7 @@ namespace SimpleGame.UI
 
         private void OnGameStarted(float countdown)
         {
+            SetMainGroupVisibility(false);
             DOTween
                 .To(() => countdown, (v) => countdown = v, 0, countdown)
                 .SetEase(Ease.Linear)
@@ -51,6 +53,7 @@ namespace SimpleGame.UI
             _firstNumberText.text = firstNumber.ToString();
             _secondNumberText.text = secondNumber.ToString();
             _canSubmit = true;
+            SetMainGroupVisibility(true);
         }
 
         private void OnSubmitClicked()
@@ -70,6 +73,13 @@ namespace SimpleGame.UI
                 _secondNumberText.text = string.Empty;
                 _answerInputField.text = string.Empty;
             }
+        }
+
+        private void SetMainGroupVisibility(bool isVisible)
+        {
+            _mainGroup.interactable = isVisible;
+            _mainGroup.blocksRaycasts = isVisible;
+            _mainGroup.alpha = isVisible ? 1 : 0;
         }
     }
 }
