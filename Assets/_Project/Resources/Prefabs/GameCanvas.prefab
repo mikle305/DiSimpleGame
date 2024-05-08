@@ -1347,8 +1347,9 @@ MonoBehaviour:
   _firstNumberText: {fileID: 1304823502132994062}
   _secondNumberText: {fileID: 2309412348203460144}
   _descriptionText: {fileID: 5952639087865081079}
-  _submitButton: {fileID: 3440893080262566332}
   _answerInputField: {fileID: 5203135432064867856}
+  _submitButton: {fileID: 3440893080262566332}
+  _mainGroup: {fileID: 6426566735059784868}
 --- !u!1 &7986563014023214001
 GameObject:
   m_ObjectHideFlags: 0

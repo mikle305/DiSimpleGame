@@ -368,11 +368,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 77744073194784581, guid: 74deacf79fb54324981dc07ada567a59, type: 3}
   m_PrefabInstance: {fileID: 2091942709112093738}
   m_PrefabAsset: {fileID: 0}
---- !u!225 &1488559414 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 6426566735059784868, guid: c320de702518a3444b70838a141ac310, type: 3}
-  m_PrefabInstance: {fileID: 7978643973814399091}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1914591262
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,14 +654,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 143587957199666013, guid: c320de702518a3444b70838a141ac310, type: 3}
-      propertyPath: _mainGroup
-      value: 
-      objectReference: {fileID: 1488559414}
-    - target: {fileID: 143587957199666013, guid: c320de702518a3444b70838a141ac310, type: 3}
-      propertyPath: _mainUiGroup
-      value: 
-      objectReference: {fileID: 1488559414}
     - target: {fileID: 2724022540388767731, guid: c320de702518a3444b70838a141ac310, type: 3}
       propertyPath: m_Pivot.x
       value: 0
