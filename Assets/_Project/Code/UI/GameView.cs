@@ -15,8 +15,8 @@ namespace SimpleGame.UI
         [SerializeField] private TextMeshProUGUI _secondNumberText;
         [SerializeField] private TextMeshProUGUI _descriptionText;
         [SerializeField] private TMP_InputField _answerInputField;
-        [SerializeField] private Button _submitButton;
         [SerializeField] private CanvasGroup _mainGroup;
+        [SerializeField] private Button _submitButton;
 
         private GameService _gameService;
         private bool _canSubmit = true;

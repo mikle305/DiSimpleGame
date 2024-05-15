@@ -1,25 +1,25 @@
 namespace Examples.Singleton
 {
-public class AudioManager
-{
-    private static AudioManager _instance;
-
-    private AudioManager() {}
-
-    public static AudioManager Instance
+    public class AudioManager
     {
-        get
+        private static AudioManager _instance;
+
+        private AudioManager() {}
+
+        public static AudioManager Instance
         {
-            if (_instance == null)
-                _instance = new AudioManager();
-            
-            return _instance;
+            get
+            {
+                if (_instance == null)
+                    _instance = new AudioManager();
+                
+                return _instance;
+            }
+        }
+
+        public void PlayMusic(string musicName)
+        {
+            // Проигрывает музыку под названием musicName
         }
     }
-
-    public void PlayMusic(string musicName)
-    {
-        // Проигрывает музыку под названием musicName
-    }
-}
 }

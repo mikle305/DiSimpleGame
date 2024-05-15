@@ -2,7 +2,6 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using SimpleGame.Additional;
-using UnityEngine;
 using Object = UnityEngine.Object;
 
 namespace SimpleGame.Services
@@ -29,12 +28,5 @@ namespace SimpleGame.Services
         public T GetConfig<T>() 
             where T : Object 
             => _configsMap[typeof(T)] as T;
-    }
-
-    public class AssetsProvider
-    {
-        public T[] LoadAll<T>(string name)
-            where T : Object
-            => Resources.LoadAll<T>(name);
     }
 }

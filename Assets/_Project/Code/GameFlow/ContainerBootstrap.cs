@@ -33,7 +33,6 @@ namespace SimpleGame.GameFlow
         {
             IContainerBuilder containerBuilder = new ContainerBuilder();
             RegisterServices(containerBuilder);
-            
             return containerBuilder.Build() as IMonoResolver;
         }
 
